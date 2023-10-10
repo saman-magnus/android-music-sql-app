@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubActivity.SongActivity"
+    android:background="@android:color/black">
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/tvNamePlaying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="40dp"
+        android:text="No songs yet"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/tvTimePre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar1"
+        android:layout_marginStart="10dp"
+        android:text="00:00"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/tvTimePost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/seekBar1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:text="00:00"
+        android:textColor="@color/white" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ctnBtn"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:outlineSpotShadowColor="@color/white" />
+
+
+    <LinearLayout
+        android:id="@+id/ctnBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+
+
+        <ImageView
+            android:id="@+id/ivPre"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/btn_pre"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/btn_pause"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivStop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/btn_stop"
+            app:tint="@color/white" />
+
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/btn_next"
+            app:tint="@color/white" />
+
+
+
+
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_playing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvTimePost"
+        android:layout_below="@id/tvNamePlaying"
+
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="18dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="10"
+        android:gravity="right"
+        android:hint="e.g 9"
+        android:layoutDirection="rtl"
+        android:textAlignment="gravity" />
+
+
+
+</RelativeLayout>
